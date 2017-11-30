@@ -64,7 +64,7 @@ class DiatonicHarmonica(Harmonica):
 	#
 	#	Initialise.
 	#
-	def __init__(self,tuning = "C3"):
+	def __init__(self,tuning = "C4"):
 		self.bendLimits = [ None,  1,2,3,1,0,1,0,0,0,0 ]
 		self.createNoteMaps(tuning)
 		self.createDirectory()
