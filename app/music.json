@@ -1,27 +1,10 @@
 {
-    "beats":"4",
-    "speed":"100",
-    "title":"ode to joy",
-    "composer":"classical",
-    "key":"c",
-    "harmonica":"diatonic",
-    "compiler":"0.1",
-    "bars": [
-              ">4d;>4d;<4d;>5d",
-              ">5d;<4d;>4d;<3d",
-              ">3d;>3d;<3d;>4d",
-              ">4f;<3b;<3d",
-              ">4d;>4d;<4d;>5d",
-              ">5d;<4d;>4d;<3d",
-              ">3d;>3d;<3d;>4d",
-              "<3f;>3b;>3d",
-              "<3d;<3d;>4d;>3d",
-              "<3d;>4b;<4b;>4d;>3d",
-              "<3d;>4b;<4b;>4d;<3d",
-              ">3d;<3d;>2h",
-              ">4d;>4d;<4d;>5d",
-              ">5d;<4d;>4d;<3d",
-              ">3d;>3d;<3d;>4d",
-              "<3f;>3b;>3d"
-            ]
+"beats":"4",
+"harmonica":"diatonic(c4)",
+"tempo":"100",
+"title":"no title",
+"bars":[
+    "48d;50d;52d;54d",
+    "63b;62b;61b;60b;59b;58b;57b;56b"
+]
 }

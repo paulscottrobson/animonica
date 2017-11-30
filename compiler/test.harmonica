@@ -3,11 +3,12 @@
 //							Demo source file.
 //
 // **********************************************************************
-// Defaults are : stripped file name, 4, 100 , diatonic(c)
+//
+// Defaults are : stripped file name, 4, 100 , diatonic(c4)
 title := a title
 beats := 4
 tempo := 100
-//harmonica := diatonic(c)
+//harmonica := diatonic(c4)
 //
 //	+x blow -x draw ^ bend once -=.o modifiers. 
 //
