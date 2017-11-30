@@ -1,0 +1,70 @@
+{
+    "frames":{
+        "frame": {
+            "frame":{ "x":108,"y":92,"w":79,"h":79 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":79,"h":79 },
+            "sourceSize":{ "w":79,"h":79 }
+        },
+        "icon_frame": {
+            "frame":{ "x":268,"y":92,"w":54,"h":54 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":54,"h":54 },
+            "sourceSize":{ "w":54,"h":54 }
+        },
+        "rectangle": {
+            "frame":{ "x":188,"y":92,"w":76,"h":51 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":76,"h":51 },
+            "sourceSize":{ "w":76,"h":51 }
+        },
+        "sphere_yellow": {
+            "frame":{ "x":108,"y":0,"w":88,"h":88 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
+            "sourceSize":{ "w":88,"h":88 }
+        },
+        "sphere_green": {
+            "frame":{ "x":200,"y":0,"w":88,"h":88 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
+            "sourceSize":{ "w":88,"h":88 }
+        },
+        "sphere_orange": {
+            "frame":{ "x":292,"y":0,"w":88,"h":88 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
+            "sourceSize":{ "w":88,"h":88 }
+        },
+        "sphere_red": {
+            "frame":{ "x":384,"y":0,"w":88,"h":88 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
+            "sourceSize":{ "w":88,"h":88 }
+        },
+        "hole": {
+            "frame":{ "x":0,"y":0,"w":105,"h":114 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":105,"h":114 },
+            "sourceSize":{ "w":105,"h":114 }
+        }
+    },
+    "meta":{
+        "app":"Paul Robson's Python texture packer",
+        "version":"1.0",
+        "image":"sprites.png",
+        "size":{
+             "w":512,
+             "h":173
+         },
+         "scale":1
+    }
+}
