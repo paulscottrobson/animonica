@@ -32,4 +32,10 @@ interface IRenderManager {
      * @memberof IRenderManager
      */
     moveTo(barPosition:number):void;
+    /**
+     * Destroy the render manager background/foreground etc.
+     * 
+     * @memberof IRenderManager
+     */
+    destroy():void;
 }

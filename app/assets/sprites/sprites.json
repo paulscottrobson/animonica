@@ -50,11 +50,11 @@
             "sourceSize":{ "w":88,"h":88 }
         },
         "hole": {
-            "frame":{ "x":0,"y":0,"w":105,"h":114 },
+            "frame":{ "x":0,"y":0,"w":105,"h":105 },
             "rotated":false,
             "trimmed":false,
-            "spriteSourceSize":{ "x":0,"y":0,"w":105,"h":114 },
-            "sourceSize":{ "w":105,"h":114 }
+            "spriteSourceSize":{ "x":0,"y":0,"w":105,"h":105 },
+            "sourceSize":{ "w":105,"h":105 }
         }
     },
     "meta":{

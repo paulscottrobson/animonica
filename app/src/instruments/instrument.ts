@@ -57,10 +57,10 @@ class Instrument {
      * Get the note production information for a given note.
      * 
      * @param {number} noteID 
-     * @returns {*} 
+     * @returns {*} structure containing noteid/action/hole/slide/bend
      * @memberof Instrument
      */
-    public getNoteAction(noteID:number):any {
+    public getNotePlayInfo(noteID:number):any {
         return this.noteInfo[noteID];
     }
 
@@ -72,7 +72,7 @@ class Instrument {
      * @memberof Instrument
      */
     public canPlay(noteID:number):boolean {
-        return noteID in this.noteInfo;
+        return (this.noteInfo[noteID] != undefined);
     }
 
     /**

@@ -4,7 +4,7 @@
 #
 # *************************************************************************
 
-from harmonica import Harmonica
+from harmonica import Harmonica,HarmonicaException
 
 class DiatonicHarmonica(Harmonica):
 	#
@@ -34,8 +34,16 @@ class DiatonicHarmonica(Harmonica):
 	#	Get note number on scale for given hole, no sound => None 
 	#
 	def getNote(self,hole,isBlow,bendCount = 0,slide = False):
-		baseID = self.topRow[hole] if isBlow else self.bottomRow[hole]
-		return baseID - bendCount
+		# if blow, return the top hole.
+		if isBlow:
+			if bendCount > 0:
+				raise HarmonicaException("Blow Bend not supported")
+			return self.topRow[hole]
+		# if draw, check the bend is in range.
+		if bendCount > self.canBend(hole):
+			return None
+		# return bottom hole bent appropriately.
+		return self.bottomRow[hole] - bendCount
 	#
 	#	Can bend a hole ? Return 0,1,2,3 according to how much.
 	#		

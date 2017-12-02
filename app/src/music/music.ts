@@ -9,13 +9,17 @@ class Music {
 
     private json:any;
     private bars:Bar[];
-
+    private instrument:Instrument;
     constructor(json:any) {
         this.json = json;
+        // Empty bar
         this.bars = [];
+        // Get the instrument information.
+        this.instrument = new Instrument(this.getInstrumentName());
+                
         // Add bars
         for (var bDef of json.bars) {
-            this.bars.push(new Bar(bDef));
+            this.bars.push(new Bar(bDef,this));
         }
     }
     /**
@@ -28,12 +32,21 @@ class Music {
         return this.json.title;
     }
     /**
+     * Get the instrument descriptor.
+     * 
+     * @returns {Instrument} 
+     * @memberof Music
+     */
+    getInstrument():Instrument {
+        return this.instrument;
+    }
+    /**
      * Get internal instrument name
      * 
      * @returns {string} 
      * @memberof Music
      */
-    getInstrument(): string {
+    getInstrumentName(): string {
         return this.json.harmonica;
     }
     /**

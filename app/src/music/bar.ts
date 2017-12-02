@@ -7,17 +7,28 @@
  */
 class Bar {
     private notes:Note[];
+    private music:Music;
 
-    constructor(barDef:string) {
+    constructor(barDef:string,music:Music) {
         this.notes = [];
+        this.music = music;
         var qbTime:number = 0;
         for (var nDef of barDef.split(";")) {
             if (nDef != "") {
-                var note:Note = new Note(nDef,qbTime);
+                var note:Note = new Note(nDef,qbTime,this);
                 qbTime = qbTime + note.getQBLength();
                 this.notes.push(note);
             }
         }
+    }
+    /**
+     * Get owning music object
+     * 
+     * @returns {Music} 
+     * @memberof Bar
+     */
+    getMusic():Music {
+        return this.music;
     }
     /**
      * Get the number of notes in this bar.

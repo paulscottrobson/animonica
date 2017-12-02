@@ -8,7 +8,6 @@
  */
 class MainState extends Phaser.State {
 
-    private instrument:Instrument;
     private music:Music;
 
     create() : void {
@@ -16,12 +15,16 @@ class MainState extends Phaser.State {
         Config.setup(this.game);
         // Get music
         this.music = new Music(this.cache.getJSON("music"));
-        // Get the instrument information.
-        this.instrument = new Instrument(this.music.getInstrument());
+        //
+        var h:Harmonica = new Harmonica(this.game,this.music);
+        for (var n = 1;n <= 10;n++) {
+            var i:Phaser.Image = this.game.add.image(h.getHoleCentreX(n),h.getHoleCentreY(),"sprites","rectangle");
+            i.width = 2;i.height = 100;
+        }
     }
 
     destroy() : void {
-        this.instrument = this.music = null;
+        this.music = null;
     }
 
     update() : void {

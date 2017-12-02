@@ -6,6 +6,9 @@
 
 import sys
 
+class HarmonicaException(Exception):
+	pass
+	
 class Harmonica:
 	#
 	#	Create the directory of available notes this instrument can play.

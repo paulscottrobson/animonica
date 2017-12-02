@@ -14,7 +14,7 @@ class HarmonicaTabApplication extends Phaser.Game {
 
     constructor() {
         // Call the super constructor.
-        super(1280,800,Phaser.AUTO,"",null,false,false);
+        super(600,800,Phaser.AUTO,"",null,false,false);
         // Create a new state and switch to it.
         this.state.add("Boot", new BootState());
         this.state.add("Preload", new PreloadState());
