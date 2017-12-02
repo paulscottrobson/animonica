@@ -26,11 +26,11 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="56.480534"
-     inkscape:cy="830.13218"
+     inkscape:cx="-88.476352"
+     inkscape:cy="660.42656"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="996"
      inkscape:window-x="0"
@@ -273,6 +273,41 @@
          width="5.5096207"
          id="rect72"
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.78204602;stroke-opacity:1" />
+    </g>
+    <g
+       id="g99"
+       transform="translate(-18.520831,8.005216)"
+       inkscape:export-filename="/home/paulr/Projects/animonica/graphics/source/rail.png"
+       inkscape:export-xdpi="40"
+       inkscape:export-ydpi="40">
+      <rect
+         y="109.14584"
+         x="47.343613"
+         height="74.151047"
+         width="2.9272213"
+         id="rect54"
+         style="fill:#333333;stroke:#ffffff;stroke-width:0.19687583;stroke-opacity:1" />
+      <rect
+         y="109.07812"
+         x="44.697781"
+         height="74.151047"
+         width="2.9272213"
+         id="rect54-3"
+         style="fill:#666666;stroke:#ffffff;stroke-width:0.19687583;stroke-opacity:1" />
+      <rect
+         y="109.07812"
+         x="42.051945"
+         height="74.151047"
+         width="2.9272213"
+         id="rect54-6"
+         style="fill:#b3b3b3;stroke:#ffffff;stroke-width:0.19687583;stroke-opacity:1" />
+      <rect
+         y="109.07812"
+         x="39.406113"
+         height="74.151047"
+         width="2.9272213"
+         id="rect54-6-7"
+         style="fill:#e6e6e6;stroke:#e6e6e6;stroke-width:0.19687583;stroke-opacity:1" />
     </g>
   </g>
 </svg>

@@ -8,7 +8,7 @@ class Harmonica extends Phaser.Group {
     constructor(game:Phaser.Game,music:Music) {
         super(game);
         this.instrument = music.getInstrument();
-        this.holeSize = Math.floor((game.width - 64) / (this.instrument.getHoleCount()+2));
+        this.holeSize = Math.floor((game.width - 32) / (this.instrument.getHoleCount()+1));
         for (var n = 0;n < this.instrument.getHoleCount();n++) {
             var img:Phaser.Image = game.add.image(this.getXOffset(n),0,"sprites","hole",this);
             img.width = img.height = this.holeSize;
@@ -31,9 +31,9 @@ class Harmonica extends Phaser.Group {
             img.height = this.holeSize / 2;
             img.anchor.x = (m < 0) ? 1 : 0;img.anchor.y = 0.5;
         }
-        var img:Phaser.Image = this.game.add.image(0,0,"sprites","rectangle",this);
-        img.height = 400;img.width = 1;        
-        img.anchor.x = img.anchor.y = 0.5;
+        //var img:Phaser.Image = this.game.add.image(0,0,"sprites","rectangle",this);
+        //img.height = 400;img.width = 1;        
+        //img.anchor.x = img.anchor.y = 0.5;
         this.moveTo(game.width/2,game.height/2);
     }
 

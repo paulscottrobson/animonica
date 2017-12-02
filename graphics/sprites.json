@@ -21,6 +21,13 @@
             "spriteSourceSize":{ "x":0,"y":0,"w":76,"h":51 },
             "sourceSize":{ "w":76,"h":51 }
         },
+        "rail": {
+            "frame":{ "x":476,"y":0,"w":17,"h":117 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":17,"h":117 },
+            "sourceSize":{ "w":17,"h":117 }
+        },
         "sphere_yellow": {
             "frame":{ "x":108,"y":0,"w":88,"h":88 },
             "rotated":false,

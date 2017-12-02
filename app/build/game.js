@@ -25,12 +25,7 @@ var MainState = (function (_super) {
     MainState.prototype.create = function () {
         Config.setup(this.game);
         this.music = new Music(this.cache.getJSON("music"));
-        var h = new Harmonica(this.game, this.music);
-        for (var n = 1; n <= 10; n++) {
-            var i = this.game.add.image(h.getHoleCentreX(n), h.getHoleCentreY(), "sprites", "rectangle");
-            i.width = 2;
-            i.height = 100;
-        }
+        this.rManager = new ZoomRenderManager(this.game, this.music);
     };
     MainState.prototype.destroy = function () {
         this.music = null;
@@ -272,6 +267,10 @@ var BaseRenderManager = (function () {
     function BaseRenderManager(game, music) {
         this.game = game;
         this.music = music;
+        this.createBackground();
+        this.createForeground();
+        this.updateBackground();
+        this.updateForeground();
     }
     BaseRenderManager.prototype.destroy = function () {
         this.music = null;
@@ -283,7 +282,7 @@ var Harmonica = (function (_super) {
     function Harmonica(game, music) {
         var _this = _super.call(this, game) || this;
         _this.instrument = music.getInstrument();
-        _this.holeSize = Math.floor((game.width - 64) / (_this.instrument.getHoleCount() + 2));
+        _this.holeSize = Math.floor((game.width - 32) / (_this.instrument.getHoleCount() + 1));
         for (var n = 0; n < _this.instrument.getHoleCount(); n++) {
             var img = game.add.image(_this.getXOffset(n), 0, "sprites", "hole", _this);
             img.width = img.height = _this.holeSize;
@@ -312,10 +311,6 @@ var Harmonica = (function (_super) {
             img.anchor.x = (m < 0) ? 1 : 0;
             img.anchor.y = 0.5;
         }
-        var img = _this.game.add.image(0, 0, "sprites", "rectangle", _this);
-        img.height = 400;
-        img.width = 1;
-        img.anchor.x = img.anchor.y = 0.5;
         _this.moveTo(game.width / 2, game.height / 2);
         return _this;
     }
@@ -363,23 +358,45 @@ var ZoomRenderManager = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     ZoomRenderManager.prototype.createBackground = function () {
-        throw new Error("Method not implemented.");
+        this.bgrGroup = new Phaser.Group(this.game);
     };
     ZoomRenderManager.prototype.createForeground = function () {
-        throw new Error("Method not implemented.");
+        this.harmonica = new Harmonica(this.game, this.music);
+        this.harmonica.moveTo(this.game.width / 2, this.game.height * 0.9);
+        for (var h = 1; h <= 10; h++) {
+            var line = this.game.add.image(this.xc(h, 0), this.yc(0), "sprites", "rail", this.bgrGroup);
+            var dy = this.yc(0) - this.yc(1000);
+            var dx = this.xc(h, 0) - this.xc(h, 1000);
+            line.width = 5;
+            line.height = Math.sqrt(dx * dx + dy * dy);
+            line.anchor.x = 0.5;
+            line.anchor.y = 1;
+            var angle = Math.atan2(dy, dx);
+            line.rotation = angle - Math.PI / 2;
+        }
     };
     ZoomRenderManager.prototype.updateBackground = function () {
-        throw new Error("Method not implemented.");
+        this.game.world.sendToBack(this.bgrGroup);
     };
     ZoomRenderManager.prototype.updateForeground = function () {
-        throw new Error("Method not implemented.");
+        this.game.world.bringToTop(this.harmonica);
     };
     ZoomRenderManager.prototype.moveTo = function (barPosition) {
         throw new Error("Method not implemented.");
     };
     ZoomRenderManager.prototype.destroy = function () {
         _super.prototype.destroy.call(this);
-        throw new Error("Method not implemented.");
+        this.bgrGroup.destroy();
+        this.harmonica.destroy();
+        this.bgrGroup = this.harmonica = null;
+    };
+    ZoomRenderManager.prototype.xc = function (hole, y) {
+        var x = this.harmonica.getHoleCentreX(hole) - this.game.width / 2;
+        var s = 1 - y / 1150;
+        return s * x + this.game.width / 2;
+    };
+    ZoomRenderManager.prototype.yc = function (y) {
+        return this.harmonica.getHoleCentreY() - y / 1000 * this.game.height * 0.8;
     };
     return ZoomRenderManager;
 }(BaseRenderManager));

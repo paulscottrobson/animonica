@@ -7,6 +7,10 @@ abstract class BaseRenderManager implements IRenderManager {
 
     constructor(game:Phaser.Game,music:Music) {
         this.game = game;this.music = music;
+        this.createBackground();
+        this.createForeground();
+        this.updateBackground();
+        this.updateForeground();
     }
 
     destroy(): void {
