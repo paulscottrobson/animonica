@@ -7,19 +7,19 @@
             "spriteSourceSize":{ "x":0,"y":0,"w":79,"h":79 },
             "sourceSize":{ "w":79,"h":79 }
         },
+        "hole": {
+            "frame":{ "x":0,"y":0,"w":105,"h":105 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":105,"h":105 },
+            "sourceSize":{ "w":105,"h":105 }
+        },
         "icon_frame": {
             "frame":{ "x":268,"y":92,"w":54,"h":54 },
             "rotated":false,
             "trimmed":false,
             "spriteSourceSize":{ "x":0,"y":0,"w":54,"h":54 },
             "sourceSize":{ "w":54,"h":54 }
-        },
-        "rectangle": {
-            "frame":{ "x":188,"y":92,"w":76,"h":51 },
-            "rotated":false,
-            "trimmed":false,
-            "spriteSourceSize":{ "x":0,"y":0,"w":76,"h":51 },
-            "sourceSize":{ "w":76,"h":51 }
         },
         "rail": {
             "frame":{ "x":476,"y":0,"w":17,"h":117 },
@@ -28,40 +28,40 @@
             "spriteSourceSize":{ "x":0,"y":0,"w":17,"h":117 },
             "sourceSize":{ "w":17,"h":117 }
         },
-        "sphere_yellow": {
+        "rectangle": {
+            "frame":{ "x":188,"y":92,"w":76,"h":51 },
+            "rotated":false,
+            "trimmed":false,
+            "spriteSourceSize":{ "x":0,"y":0,"w":76,"h":51 },
+            "sourceSize":{ "w":76,"h":51 }
+        },
+        "sphere_green": {
             "frame":{ "x":108,"y":0,"w":88,"h":88 },
             "rotated":false,
             "trimmed":false,
             "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
             "sourceSize":{ "w":88,"h":88 }
         },
-        "sphere_green": {
+        "sphere_orange": {
             "frame":{ "x":200,"y":0,"w":88,"h":88 },
             "rotated":false,
             "trimmed":false,
             "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
             "sourceSize":{ "w":88,"h":88 }
         },
-        "sphere_orange": {
+        "sphere_red": {
             "frame":{ "x":292,"y":0,"w":88,"h":88 },
             "rotated":false,
             "trimmed":false,
             "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
             "sourceSize":{ "w":88,"h":88 }
         },
-        "sphere_red": {
+        "sphere_yellow": {
             "frame":{ "x":384,"y":0,"w":88,"h":88 },
             "rotated":false,
             "trimmed":false,
             "spriteSourceSize":{ "x":0,"y":0,"w":88,"h":88 },
             "sourceSize":{ "w":88,"h":88 }
-        },
-        "hole": {
-            "frame":{ "x":0,"y":0,"w":105,"h":105 },
-            "rotated":false,
-            "trimmed":false,
-            "spriteSourceSize":{ "x":0,"y":0,"w":105,"h":105 },
-            "sourceSize":{ "w":105,"h":105 }
         }
     },
     "meta":{

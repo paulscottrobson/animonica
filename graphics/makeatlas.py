@@ -107,10 +107,11 @@ count = 0
 gpack = GraphicPacker()
 for root,dirs,files in os.walk("source"):
 	for f in files:
-		count = count + 1
-		fName = root + os.sep + f
-		gob = GraphicObject(fName)
-		gpack.append(gob)
+		if f != "Thumbs.db":
+			count = count + 1
+			fName = root + os.sep + f
+			gob = GraphicObject(fName)
+			gpack.append(gob)
 gpack.pack()
 gpack.render("sprites")
 print("Grabbed {0} sprites".format(count))
