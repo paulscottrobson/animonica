@@ -1,30 +1,28 @@
 /// <reference path="../lib/phaser.comments.d.ts"/>
 
 /**
- * Main game state
+ * Main Game class.
  * 
  * @class MainState
  * @extends {Phaser.State}
  */
 class MainState extends Phaser.State {
 
-    private music:Music;
-    private rManager:IRenderManager;
+    public static VERSION:string="0.01 11-Jun-18 Phaser-CE 2.8.7 (c) PSR 2018";
 
-    create() : void {
-        // Set up configuration
-        Config.setup(this.game);
-        // Get music
-        this.music = new Music(this.cache.getJSON("music"));
-        // Create render manager
-        this.rManager = new ZoomRenderManager(this.game,this.music);
+    init() {
+        // Initialise config
+        Configuration.initialise(this.game);
     }
 
+    create() {    
+    }
+    
     destroy() : void {
-        this.music = null;
     }
 
     update() : void {
+        // Time in milliseconds
+        var elapsedMS:number = this.game.time.elapsedMS;
     }
-
 }    

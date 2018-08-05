@@ -3,34 +3,25 @@
 /**
  * Configuration information.
  * 
- * @class Config
+ * @class Configuration
  */
-class Config {
-    
+class Configuration {
     /**
-     * Screen width
+     * Display width
      * 
-     * @static
-     * @type {number}
-     * @memberof Config
+     * @memberof Configuration
      */
     public static width:number;
     /**
-     * Screen height.`
+     * Display height
      * 
-     * @static
      * @type {number}
-     * @memberof Config
+     * @memberof Configuration
      */
-    public static height:number
-    /**
-     * Set up configuration.
-     * 
-     * @param {Phaser.Game} game 
-     * @memberof Config
-     */
-    public static setup(game:Phaser.Game) {
-        Config.width = game.width;
-        Config.height = game.height;
+    public static height:number;
+
+    public static initialise(game:Phaser.Game): void {
+        Configuration.width = game.width;
+        Configuration.height = game.height;
     }
 }

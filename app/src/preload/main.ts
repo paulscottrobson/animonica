@@ -1,20 +1,24 @@
 /// <reference path="../../lib/phaser.comments.d.ts"/>
 
 window.onload = function() {
-    var game = new HarmonicaTabApplication();
+    var game = new StringTrainerApplication();
 }
 
-/**
- * Main Application class
- * 
- * @class SeagullMerlinApplication
- * @extends {Phaser.Game}
- */
-class HarmonicaTabApplication extends Phaser.Game {
+class StringTrainerApplication extends Phaser.Game {
 
     constructor() {
         // Call the super constructor.
-        super(600,800,Phaser.AUTO,"",null,false,false);
+        super({
+            enableDebug: false,
+            width:1200,
+            height:800,
+            renderer:Phaser.AUTO,
+            parent:null,
+            transparent: false,            antialias: true
+
+        });
+
+        //1280,800,Phaser.AUTO,"",null,false,false
         // Create a new state and switch to it.
         this.state.add("Boot", new BootState());
         this.state.add("Preload", new PreloadState());
@@ -42,11 +46,12 @@ class HarmonicaTabApplication extends Phaser.Game {
  * Boot state. Preloads loader image, sets up display.
  */
 class BootState extends Phaser.State {
+
     preload() : void {
-        this.game.load.image("loader","assets/sprites/loader.png");
+        // Load the loader image
         this.game.load.onLoadComplete.add(() => { this.game.state.start("Preload",true,false,1); },this);
     }
-
+    
     create() : void {        
         // Make the game window fit the display area. Doesn't work in the Game constructor.
         this.game.scale.pageAlignHorizontally = true;

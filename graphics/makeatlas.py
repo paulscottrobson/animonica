@@ -66,7 +66,7 @@ class GraphicPacker:
 
 	def render(self,baseName):
 		baseName = baseName.lower()														# all file names l/c
-		atlas = Image.new("RGBA",(self.imageWidth,self.atlasHeight),"black")			# blue background
+		atlas = Image.new("RGBA",(self.imageWidth,self.atlasHeight),(0,0,0,0))			# blue background
 		for image in self.imageList:													# render all images
 			image["object"].render(atlas,image["left"],image["top"])	
 		atlas.save(baseName+".png",optimize=True)										# save atlas image	
@@ -107,11 +107,10 @@ count = 0
 gpack = GraphicPacker()
 for root,dirs,files in os.walk("source"):
 	for f in files:
-		if f != "Thumbs.db":
-			count = count + 1
-			fName = root + os.sep + f
-			gob = GraphicObject(fName)
-			gpack.append(gob)
+		count = count + 1
+		fName = root + os.sep + f
+		gob = GraphicObject(fName)
+		gpack.append(gob)
 gpack.pack()
 gpack.render("sprites")
 print("Grabbed {0} sprites".format(count))
