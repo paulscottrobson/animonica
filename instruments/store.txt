@@ -1,0 +1,19 @@
+[
++0 		TypeID [1]
++1		Short name,  string
++2		Long name, string
++3 		Holes
++4 		Chromatic (1,0,-1)
++5..15	Unused, set to zero.
++16..18	Hole#1
++19..21 Hole#2 (etc.)
+]
+
+Output is an array of arrays:
+
+Holes
+=====
++0		Note to play on blow ($80 = none, 1 = C4)
++1 		Note to play on draw ($80 = none, 1 = C4)
++2 		(bits 0..2 only) amount the note can be bent
+		(bit 3)			 0 = blow bend,1 = draw bend
