@@ -9,11 +9,11 @@
 +19..21 Hole#2 (etc.)
 ]
 
-Output is an array of arrays:
+Output is an array of arrays in this format.
 
 Holes
 =====
-+0		Note to play on blow ($80 = none, 1 = C4)
-+1 		Note to play on draw ($80 = none, 1 = C4)
++0		Note to play on blow (0 = none, 1 = C3)
++1 		Note to play on draw (0 = none, 1 = C3)
 +2 		(bits 0..2 only) amount the note can be bent
 		(bit 3)			 0 = blow bend,1 = draw bend
